@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Digital Agency - Empowering Your Online Presence</title>
+    <meta name="description" content="Discover innovative solutions for web design, branding, SEO, and digital marketing. Partner with our digital agency to elevate your online presence and achieve your business goals." />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
   <body>
@@ -19,13 +22,13 @@
       </a>
       <!-- Navigation links (hidden by default) -->
       <div id="myLinks">
-        <a href="#home">Home</a>
-        <a href="#services">What we do</a>
-        <a href="#pricing">Pricing plans</a>
-        <a href="#team">Meet our teams</a>
+        <a href="#home" onclick="closeNavigationLinks()">Home</a>
+        <a href="#services" onclick="closeNavigationLinks()">What we do</a>
+        <a href="#pricing" onclick="closeNavigationLinks()">Pricing plans</a>
+        <a href="#team" onclick="closeNavigationLinks()">Meet our teams</a>
       </div>
       <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <a href="javascript:void(0);" class="icon" onclick="toggleNavigationLinks()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
@@ -85,9 +88,8 @@
         </div>
       </div>
     </div>
-<br> <br>
     <!-- tables -->
-    <h2 style="text-align: center" id="pricing">Pricing according to services</h2>
+    <h2 id="pricing">Pricing according to services</h2>
     <div class="columns">
       <ul class="price">
         <li class="header">Basic</li>
@@ -105,7 +107,7 @@
 
     <div class="columns">
       <ul class="price">
-        <li class="header" style="background-color: #23abdc">Pro</li>
+        <li class="header">Pro</li>
         <li class="grey"><strong>$ 199 / month</strong></li>
         <li><i class="fa-solid fa-palette"></i> 5 Design Revisions</li>
         <li><i class="fa-solid fa-rectangle-ad"></i> 3 Ad Campaigns</li>
@@ -134,9 +136,8 @@
     </div>
     
     <!-- Team Members -->
-     <br/> <br/>
-    <h2 id="team" style="text-align: center">Meet Our Team</h2>
-    <p style="text-align: center">
+    <h2 id="team" >Meet Our Team</h2>
+    <p class="team-description">
       Our talented professionals are here to make your project a success.
     </p>
 
@@ -189,7 +190,7 @@
     <!-- Contact Form -->
     <h2 style="text-align: center;" id="contact">Contact Us Today</h2>
     <div class="container">
-      <form action="action_page.php">
+      <form onsubmit="return validateForm()" >
     
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
@@ -243,10 +244,7 @@
           </div>
         </footer>
   
-  </body>
   </html>
-
-
     <script src="scripts.js"></script>
   </body>
 </html>
